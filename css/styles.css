@@ -4,6 +4,17 @@
   --color-acent: #ff3400;
   --color-headings: #1b0769;
   --color-body: #918ca4;
+
+  /* Bad practice, better use SASS for that with lighten(primary, 10%) */
+  --color-acent-hover: #ec3000;
+  --color-primary-hover: #3a8ffd;
+  --color-secondary-hover: #00c8eb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 /* Typography */
@@ -171,4 +182,68 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 4rem;
+  border-width: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn--acent {
+  background-color: var(--color-acent);
+  color: white;
+}
+
+.btn--acent:hover {
+  background-color: var(--color-acent-hover);
+}
+
+.btn--outline {
+  background-color: white;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-headings);
+  color: white;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
