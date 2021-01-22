@@ -4,6 +4,7 @@
   --color-acent: #ff3400;
   --color-headings: #1b0769;
   --color-body: #918ca4;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --color-placeholder: #cdcbd7;
 
@@ -405,4 +406,58 @@ its a neat trick from https://front-back.com/how-to-make-absolute-positioned-ele
 
 .media__image {
   margin-top: 1rem;
+}
+
+/* Quotes */
+
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-body-darker);
+  line-height: 1.3;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+/* .quote .media__body {
+  font-style: normal;
+} */
+
+.quote__author {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0rem;
+}
+
+.quote__organization {
+  font-size: 2rem;
+  font-style: normal;
+  color: var(--color-headings);
+  opacity: 0.4;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+
+  .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .quote__organization {
+    font-size: 2rem;
+  }
 }
