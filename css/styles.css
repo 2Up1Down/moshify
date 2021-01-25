@@ -324,6 +324,7 @@ a {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
   overflow: hidden;
+  transition: transform 0.5s;
 }
 
 .card__header,
@@ -343,6 +344,10 @@ a {
 
 .card--secondary .badge--secondary {
   background-color: #01cdf1;
+}
+
+.card--primary .badge--primary {
+  background-color: #126de4;
 }
 
 /* Plans */
@@ -376,15 +381,32 @@ a {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
+  .plan:hover {
+    transform: scale(1.05);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.15);
+  }
+}
+
 /* The following two propertiy is to make the overflow from the popular.svg visible.badge
 its a neat trick from https://front-back.com/how-to-make-absolute-positioned-elements-overlap-their-overflow-hidden-parent/ */
 .plan--popular .card__header {
-  /* position: relative; */
+  position: relative;
 }
 
 /* Its a neat trick from https://front-back.com/how-to-make-absolute-positioned-elements-overlap-their-overflow-hidden-parent/ */
+/* It all went well till lecture 32 where the posistion changed... https://codewithmosh.com/courses/1269822/lectures/28673225 */
 .plan {
-  position: relative;
+  /* position: relative; */
+
+  transition: transform 0.2s ease-out;
 }
 
 .plan--popular .card__header::before {
@@ -763,4 +785,21 @@ its a neat trick from https://front-back.com/how-to-make-absolute-positioned-ele
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
+}
+
+/* Plan block */
+
+.block-plans .grid {
+  gap: 6rem 4rem;
+
+  /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.plan--small {
+  width: 80%;
 }
