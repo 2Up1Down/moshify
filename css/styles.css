@@ -256,6 +256,11 @@ a {
   color: white;
 }
 
+.btn--streched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
 .btn--block {
   width: 100%;
   display: inline-block;
@@ -518,5 +523,47 @@ its a neat trick from https://front-back.com/how-to-make-absolute-positioned-ele
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
+  }
+}
+
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.callout__heading {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
