@@ -672,6 +672,7 @@ its a neat trick from https://front-back.com/how-to-make-absolute-positioned-ele
 
 .block__header {
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .container {
